@@ -1,0 +1,19 @@
+.hero{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.hero__content{
+    position: absolute;
+    z-index: 1;
+    top: 50%; 
+    left: 5%;
+    transform: translate(0%,-50%); 
+}
+.hero_titule{}
+.hero_text{}
+.hero__button{}
+.hero_video{
+    position: absolute;
+    width: 100%;
+}
