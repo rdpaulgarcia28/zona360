@@ -12,6 +12,7 @@
     --hero__titules__colorFont:white;
     --hero__text__Font: "Oswald-ExtraLight";
     --hero__text__colorFont: rgba(255, 255, 255, 0.7);
+    --hero__text__colorFont--black: rgb(86, 86, 86);
     --hero__button__Font:"Oswald-Bold";
     --hero__button__colorFont:  black;
     --hero__button__backgroundColor: white;
@@ -51,6 +52,7 @@
     margin: 10px 0;
     color: var(--hero__text__colorFont);
     font-family: var(--hero__text__Font);
+    text-transform: capitalize;
 }
 .hero__button{
     padding: 8px 5px;
@@ -69,6 +71,7 @@
     top: 0;
     left: 0;
 }
+
 @media(max-width:1024px){
     .hero__video{
         left: -30vh;
@@ -84,4 +87,146 @@
     .hero__video{
         left: -70vh;
     }
+}
+
+/*************************************************************     CATEGORY SECTION      ********************************************************************/
+
+.services__section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px 0;
+}
+.service__container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.services__titule{
+    font-family: var(--hero__titules__Font);
+    text-transform: capitalize;
+    font-size: 60px;
+    margin: 10px 0;
+}
+.services__menu{
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+}
+.services__item{
+    margin: 5px 10px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: var(--hero__text__Font);
+}
+.services__item:hover{
+    border-bottom: black solid 1px ;
+    cursor: pointer;
+    color: black;
+}
+.services__item:active{
+    transform: scale(.9);
+}
+.services__cardBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.services__card{
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+.services__card:hover{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+.card__logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: black 1px solid;
+    margin: 25px 0;
+}
+.card__titule{
+    font-family: var(--hero__titules__Font);
+    font-size: 20px;
+}
+.card__location{
+    font-family: var(--hero__text__Font);
+    color: var(--hero__text__colorFont--black);
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.card__boxStars{
+    display: flex;
+}
+.card__star{
+    display: block;
+    width: 12px;
+    height: 12px;
+    clip-path: polygon(50% 0%,
+    61% 35%, 98% 35%, 68% 57%,
+    79% 91%, 50% 70%, 21% 91%, 32% 57%,
+    2% 35%, 39% 35%);
+    background-color: yellow;
+    margin: auto 0;
+}
+.card__star--OFF{
+    background-color: var(--hero__text__colorFont--black);
+}
+.card__starLetter{
+    font-size: 12px;
+}
+.card__boxInfo{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+.card__info{
+    color: var(--hero__text__colorFont--black);
+    font-family: var(--hero__text__Font);
+}
+.card__infoBold{
+    color: black;
+    font-weight: bold;
+}
+.card__boxButtons{
+    width: 100%;
+    border-top: rgba(86, 86, 86, 0.201) solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card__button{
+    width: 100px;
+    height: 40px;    
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.card__button--background{
+    background-color: slateblue;
+    color: white;
+}
+.card__line{
+    display: block;
+    background-color: rgba(86, 86, 86, 0.201) ;
+    width: 1px;
+    height: 100%;
+}
+.services__button{
+    background-color: red;
 }
