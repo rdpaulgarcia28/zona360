@@ -14,8 +14,8 @@
     --hero__text__colorFont: rgba(255, 255, 255, 0.7);
     --hero__text__colorFont--black: rgb(86, 86, 86);
     --hero__button__Font:"Oswald-Bold";
-    --hero__button__colorFont:  black;
-    --hero__button__backgroundColor: white;
+    --hero__button__colorFont:  white;
+    --hero__button__backgroundColor: rgb(73, 54, 199);
 }
 
 .hero_section{
@@ -23,6 +23,7 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
+    margin-bottom: 100px;
 }
 .hero_section::before{
     content: "";
@@ -65,6 +66,9 @@
     color: var(--hero__button__colorFont);
     background-color: var(--hero__button__backgroundColor);
 }
+.hero__button:active{
+    transform: scale(.9);
+}
 .hero__video{
     position: absolute;
     max-height: 120%;
@@ -93,19 +97,17 @@
 
 .services__section{
     width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 150px 0;
+    margin-bottom: 100px;
 }
 .service__container{
-    width: 100%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 .services__titule{
     font-family: var(--hero__titules__Font);
@@ -120,17 +122,17 @@
     align-items: center;
     height: 25px;
 }
-.services__item{
+.services__menuItem{
     margin: 5px 10px;
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--hero__text__colorFont--black);
     font-family: var(--hero__text__Font);
 }
-.services__item:hover{
-    border-bottom: black solid 1px ;
+.services__menuItem:hover{
+    border-bottom: rgb(73, 54, 199) solid 1px ;
     cursor: pointer;
-    color: black;
+    color: var(--hero__button__backgroundColor);
 }
-.services__item:active{
+.services__menuItem:active{
     transform: scale(.9);
 }
 .services__cardBox{
@@ -138,8 +140,10 @@
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 .services__card{
+    position: relative;
     width: 250px;
     height: 350px;
     border-radius: 15px;
@@ -147,7 +151,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 .services__card:hover{
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
@@ -156,8 +160,8 @@
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    border: black 1px solid;
     margin: 25px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 .card__titule{
     font-family: var(--hero__titules__Font);
@@ -192,7 +196,7 @@
 .card__boxInfo{
     display: flex;
     flex-direction: column;
-    margin: 30px 0;
+    margin: 45px 0;
 }
 .card__info{
     color: var(--hero__text__colorFont--black);
@@ -216,9 +220,18 @@
     text-align: center;
     border-radius: 5px;
     margin: 5px 0;
+    text-transform: capitalize;
+
+}
+.card__button:hover{
+    background-color: var(--hero__button__backgroundColor);
+    color: white;
+}
+.card__button:active{
+    transform: scale(.9);
 }
 .card__button--background{
-    background-color: slateblue;
+    background-color: var(--hero__button__backgroundColor);
     color: white;
 }
 .card__line{
@@ -227,6 +240,18 @@
     width: 1px;
     height: 100%;
 }
-.services__button{
-    background-color: red;
+.card__top{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 30px;
+    height: 40px;
+    clip-path: polygon( 100% 0, 100% 70%, 51% 100%, 0 70%, 0 0);
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__top span{
+    font-size: 12px;
 }
