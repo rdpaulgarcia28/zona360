@@ -137,10 +137,12 @@
 }
 .services__cardBox{
     width: 100%;
+    height: 740px;
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 .services__card{
     position: relative;
